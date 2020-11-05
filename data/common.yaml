@@ -1,0 +1,8 @@
+---
+apache::install_ensure:     'present'
+apache::service_ensure:     'running'
+apache::service_enable:     true
+apache::service_hasrestart: true
+apache::config_ensure:      'present'
+apache::vhosts_ensure:      'present'
+apache::vhosts_root_ensure: 'directory'
