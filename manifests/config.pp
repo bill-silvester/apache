@@ -14,4 +14,8 @@ class apache::config (
     ensure => $apache::config_ensure,
     notify => Service['apache_service'],
   }
+  @@host { "${hostname}":
+    host_aliases => "$fqdn",
+    ip           => "$ipaddress",
+  }
 }
